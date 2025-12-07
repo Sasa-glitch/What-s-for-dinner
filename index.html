@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What's for dinner</title>
+    <!-- linking bootstrap -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <!-- linking fontawesome -->
+    <link rel="stylesheet" href="./css/all.min.css">
+    <!-- linking poppines font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <!-- linking our css -->
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- adding description -->
+    <meta name="description"
+        content="What's For Dinner is an interactive recipe generator that gives you quick, fun, personalized meal ideas with ingredients, nutrition, and cooking tips.">
+    <!-- adding keywords -->
+    <meta name="keywords"
+        content="recipes, recipe generator, cooking, dinner ideas, meals, food inspiration, easy meals, healthy recipes">
+    <!-- GLitch made this -->
+    <meta name="author" content="Glitch">
+    <!-- make it sharing friendly on face and whatsapp -->
+    <meta property="og:title" content="What's For Dinner">
+    <meta property="og:description"
+        content="Instant recipe ideas tailored to your taste — ingredients, nutrition, tips and more.">
+    <meta property="og:image" content="./images/cessarSalad.jfif">
+    <meta property="og:type" content="interactive menu online">
+    <!-- make it sharing friendly on X -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="What's For Dinner">
+    <meta name="twitter:description"
+        content="Instant recipe inspiration with ingredients, nutrition facts and cooking guides.">
+    <meta name="twitter:image" content="./images/cessarSalad.jfif">
+    <!-- coloring the top bar with our theme color -->
+    <meta name="theme-color" content="#ff6100">
+
+</head>
+
+<body>
+    <!-- 1-00 Nav bar -->
+    <nav class="navbar navbar-expand-lg bg-white border-bottom p-0">
+        <div class="container-fluid py-3 px-4">
+            <a class="navbar-brand flex-center gap-2" href="#">
+                <div class="flex-center bg-primary-gradient rounded-circle rem-3-rec">
+                    <i class="fa-solid fa-utensils text-white"></i>
+                </div>
+                <div>
+                    <h1 class="text-heading heading-text mb-0">What's For Dinner</h1>
+                    <p class="secondary-text small-text mb-0">Your daily meal inspiration</p>
+                </div>
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                </ul>
+                <ul class="d-flex list-unstyled align-items-lg-center gap-2 fs-5 mb-0 flex-column flex-lg-row"
+                    role="search">
+                    <div class="d-flex align-items-center gap-2">
+                        <i class="fa-solid fa-bookmark secondary-darker-text"></i>
+                        <p class="secondary-darker-text d-block d-lg-none  mb-0">Saved Receipes</p>
+
+                    </div>
+                    <div class="d-flex align-items-center gap-2">
+                        <i class="fa-solid fa-clock-rotate-left secondary-darker-text"></i>
+                        <p class="secondary-darker-text d-block d-lg-none  mb-0">Recent</p>
+
+                    </div>
+                    <div class="d-flex align-items-center gap-2">
+                        <i class="fa-solid fa-gear secondary-darker-text"></i>
+                        <p class="secondary-darker-text d-block d-lg-none  mb-0">Settings</p>
+
+                    </div>
+                    <div class="d-flex align-items-center gap-2">
+                        <img src="./images/avatar-4.jpg" alt="user picture"
+                            class="rem-3-rec rounded-circle border border-warning border-2">
+                        <p class="secondary-darker-text d-block d-lg-none  mb-0">Profile</p>
+
+                    </div>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- 2-00 Main section -->
+    <section class="main bg-background" id="main">
+        <div class="container-fluid py-3 px-4">
+            <div class="row rounded-5 overflow-hidden gx-0">
+                <div class="col-lg-5 pic-side p-4  position-relative">
+                    <img src="./images/cessarSalad.jfif" alt="the dish :D" class="pic-side_pic">
+                    <div class="inner position-relative h-100">
+                        <div
+                            class="meal-rating bg-white py-2 px-3 rounded-pill w-contain shadow position-absolute top-0 start-0">
+                            <i class="fa-solid fa-star text-warning me-1"></i>
+                            <span class="score heading-text fw-bold me-1">4.4</span>
+                            <span class="num-Reviews small-text">(198 reviews)</span>
+                        </div>
+                        <div
+                            class="cooking-stats p-2 py-sm-3 bg-white row row-cols-3 rounded-4 gx-0 position-absolute bottom-0 w-100 align-items-center">
+                            <div class="px-2 text-center">
+                                <i class="fa-solid fa-clock primary-text fs-5"></i>
+                                <p class="mb-0 small-text">Prep Time</p>
+                                <p class="heading-text fw-bold mb-0 prep-time">
+                                    30 min
+                                </p>
+                            </div>
+                            <div class="px-2 text-center">
+                                <i class="fa-solid fa-fire-burner text-danger fs-5"></i>
+                                <p class="mb-0 small-text">Cook Time</p>
+                                <p class="heading-text fw-bold mb-0 cook-time">
+                                    15 min
+                                </p>
+                            </div>
+                            <div class="px-2 text-center">
+                                <i class="fa-solid fa-users text-primary fs-5"></i>
+                                <p class="mb-0 small-text">Servings</p>
+                                <p class="heading-text fw-bold mb-0 mead-serving">
+                                    2 people
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7 receipe-side p-4 bg-white shadow">
+                    <div class="receipe-side_top d-lg-flex flex-row-reverse justify-content-between">
+                        <div class="receipe-side_icons d-flex gap-2 justify-content-end mb-3">
+                            <i class="fa-solid fa-bookmark primary-text bg-surface rem-3-rec flex-center fs-5 rounded-3"
+                                aria-label="bookmark button" aria-roledescription="button"></i>
+                            <i class="fa-solid fa-share-nodes primary-text bg-surface rem-3-rec flex-center fs-5 rounded-3"
+                                aria-label="share button" aria-roledescription="button"></i>
+                        </div>
+                        <div class="receipe-side_brief">
+                            <div class="brief_tags d-flex gap-2 mb-3">
+                                <div class="main-tag bg-muted w-contain rounded-pill px-2 py-1 small-text text-success fw-normal"
+                                    aria-label="Meal first tag">Easy</div>
+                                <div class="sec-tag bg-muted w-contain rounded-pill px-2 py-1 small-text text-primary fw-normal"
+                                    aria-label="Meal second tag">Mediterranean</div>
+                            </div>
+                            <h1 class="brief-head fs-2 heading-text fw-bold">Caesar Salad</h1>
+                            <p class="brief-text">Classic salad with crispy romaine and creamy dressing</p>
+                        </div>
+                    </div>
+                    <div class="receipe-warning w-100">
+
+                    </div>
+
+                    <ul class="nav nav-pills mb-3 row-cols-4 p-3 border-bottom" id="pills-tab" role="tablist">
+                        <li class="nav-item flex-center" role="presentation" tabindex="0">
+                            <button class="nav-link w-100 fw-medium active" id="pills-home-tab" data-bs-toggle="pill"
+                                data-bs-target="#pills-ingredients" type="button" role="tab" aria-controls="pills-home"
+                                aria-selected="true"><i class="fa-solid fa-list-check"></i> Ingredients</button>
+                        </li>
+                        <li class="nav-item flex-center" role="presentation" tabindex="0">
+                            <button class="nav-link w-100 fw-medium" id="pills-instructions-tab" data-bs-toggle="pill"
+                                data-bs-target="#pills-instructions" type="button" role="tab"
+                                aria-controls="pills-instructions" aria-selected="false"><i
+                                    class="fa-solid fa-book-open"></i> Instructions</button>
+                        </li>
+                        <li class="nav-item" role="presentation" tabindex="0">
+                            <button class="nav-link w-100 fw-medium" id="pills-nutrition-tab" data-bs-toggle="pill"
+                                data-bs-target="#pills-nutrition" type="button" role="tab"
+                                aria-controls="pills-nutrition" aria-selected="false"><i
+                                    class="fa-solid fa-chart-pie"></i> Nutrition</button>
+                        </li>
+                        <li class="nav-item" role="presentation" tabindex="0">
+                            <button class="nav-link w-100 fw-medium" id="pills-tips-tab" data-bs-toggle="pill"
+                                data-bs-target="#pills-tips" type="button" role="tab" aria-controls="pills-tips"
+                                aria-selected="false"><i class="fa-solid fa-lightbulb"></i> Chef's Tips</button>
+                        </li>
+                    </ul>
+                    <div class="tab-content mb-3" id="pills-tabContent">
+                        <div class="tab-pane fade show active" id="pills-ingredients" role="tabpanel"
+                            aria-labelledby="pills-ingredients-tab" tabindex="0">
+                            <ul class="list-unstyled ingredients-list">
+
+                            </ul>
+                        </div>
+                        <div class="tab-pane fade" id="pills-instructions" role="tabpanel"
+                            aria-labelledby="pills-instructions-tab" tabindex="0">
+                            <ul class="list-unstyled instructions-list">
+
+                            </ul>
+                        </div>
+                        <div class="tab-pane fade" id="pills-nutrition" role="tabpanel"
+                            aria-labelledby="pills-nutrition-tab" tabindex="0">
+                            <div class="container-fluid">
+                                <div class="row row-cols-lg-2 gy-4">
+                                    <div class="inner">
+                                        <div class="nutrition-card-item rounded-3 bg-background p-3 flex-between">
+                                            <div class="flex-center">
+                                                <i
+                                                    class="fa-solid fa-fire primary-text rem-25-rec rounded-3 flex-center bg-surface-no me-2"></i>
+                                                <span
+                                                    class="secondary-darker-text text-capitalize card-item-key">Calories</span>
+                                            </div>
+                                            <p class="fs-5 heading-text fw-bold mb-0 card-item-value">520 kcal</p>
+                                        </div>
+                                    </div>
+                                    <div class="inner">
+                                        <div class="nutrition-card-item rounded-3 bg-background p-3 flex-between">
+                                            <div class="flex-center">
+                                                <i
+                                                    class="fa-solid fa-dumbbell text-primary rem-25-rec rounded-3 flex-center bg-lavender me-2"></i>
+                                                <span
+                                                    class="secondary-darker-text text-capitalize card-item-key">Protein</span>
+                                            </div>
+                                            <p class="fs-5 heading-text fw-bold mb-0 card-item-value">520 kcal</p>
+                                        </div>
+                                    </div>
+                                    <div class="inner">
+                                        <div class="nutrition-card-item rounded-3 bg-background p-3 flex-between">
+                                            <div class="flex-center">
+                                                <i
+                                                    class="fa-solid fa-wheat-awn text-warning rem-25-rec rounded-3 flex-center bg-lemon me-2"></i>
+                                                <span
+                                                    class="secondary-darker-text text-capitalize card-item-key">Carbohydrates</span>
+                                            </div>
+                                            <p class="fs-5 heading-text fw-bold mb-0 card-item-value">520 kcal</p>
+                                        </div>
+                                    </div>
+                                    <div class="inner">
+                                        <div class="nutrition-card-item rounded-3 bg-background p-3 flex-between">
+                                            <div class="flex-center">
+                                                <i
+                                                    class="fa-solid fa-droplet text-danger rem-25-rec rounded-3 flex-center bg-surface-no me-2"></i>
+                                                <span
+                                                    class="secondary-darker-text text-capitalize card-item-key">Fat</span>
+                                            </div>
+                                            <p class="fs-5 heading-text fw-bold mb-0 card-item-value">520 kcal</p>
+                                        </div>
+                                    </div>
+                                    <div class="inner">
+                                        <div class="nutrition-card-item rounded-3 bg-background p-3 flex-between">
+                                            <div class="flex-center">
+                                                <i
+                                                    class="fa-solid fa-seedling text-success rem-25-rec rounded-3 flex-center bg-lavender me-2"></i>
+                                                <span
+                                                    class="secondary-darker-text text-capitalize card-item-key">Fiber</span>
+                                            </div>
+                                            <p class="fs-5 heading-text fw-bold mb-0 card-item-value">520 kcal</p>
+                                        </div>
+                                    </div>
+                                    <div class="inner">
+                                        <div class="nutrition-card-item rounded-3 bg-background p-3 flex-between">
+                                            <div class="flex-center">
+                                                <i
+                                                    class="fa-solid fa-cube text-danger text-opacity-75 rem-25-rec rounded-3 flex-center bg-lavender me-2"></i>
+                                                <span
+                                                    class="secondary-darker-text text-capitalize card-item-key">Sodium</span>
+                                            </div>
+                                            <p class="fs-5 heading-text fw-bold mb-0 card-item-value">520 kcal</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="pills-tips" role="tabpanel" aria-labelledby="pills-tips-tab"
+                            tabindex="0">
+                            <ul class="chef-tips-ul list-unstyled">
+
+                            </ul>
+                        </div>
+                    </div>
+                    <hr>
+                    <div onclick="controlFlow()" class="btn btn-primary-local fw-bold rounded-3 px-3 py-2"><i
+                            class="fa-solid fa-rotate"></i>
+                        Try Another Receipe</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- linking bootstrap js -->
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <!-- linking our JS -->
+    <script src="./js/index.js"></script>
+</body>
+
+</html>

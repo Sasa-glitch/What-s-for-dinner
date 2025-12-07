@@ -1,0 +1,377 @@
+/* 0-00 global classes */
+:root {
+    /* Colors */
+    --color-background: #fffaec; /* page background color */
+    --color-surface: #ffedd4; /* card / surface background */
+    --color-surface-hover: #ffd7a8;
+    --color-primary: #ff6100; /* accent / primary action color */
+    --color-primary-darker: #fc3b2d;
+    --color-primary-foreground: #ffffff; /* text on primary accent */
+    --color-secondary: #7a818f; /* secondary text  */
+    --color-secondary-darker: #6a7282; /*icons / text next to icons*/
+    --color-secondary-darker-hover: #364153; /*icons / text next to icons on hover*/
+    --color-muted: #dbfce7; /* muted text / disabled elements */
+    --color-border: #e0e0e0; /* borders, dividers */
+    --color-heading: #1a1a1a; /* main heading / title text */
+
+    /* Typography */
+    --font-family-base: "Inter", sans-serif;
+    --font-size-base: 16px;
+    --font-size-heading: 1.5rem;
+    --font-size-small: 0.8rem;
+    --font-weight-normal: 400;
+    --font-weight-bold: 600;
+
+    /* Spacing / layout */
+    --space-xs: 4px;
+    --space-sm: 8px;
+    --space-md: 16px;
+    --space-lg: 24px;
+    --space-xl: 32px;
+
+    /* Border / radius */
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --border-width: 1px;
+
+    /* Misc */
+    --transition-fast: 0.2s all ease-in;
+    --transition-normal: .4s all ease-in;
+}
+
+/* 0-1 global utilites and helpers */
+/* ============================
+   GLOBAL UTILITY CLASSES
+   ============================ */
+
+/* TEXT SIZE */
+.small-text {
+    font-size: var(--font-size-small);
+}
+
+/* TEXT COLORS */
+.primary-text {
+    color: var(--color-primary);
+}
+
+.secondary-text {
+    color: var(--color-secondary);
+}
+
+.secondary-darker-text {
+    color: var(--color-secondary-darker);
+}
+
+.muted-text {
+    color: var(--color-muted);
+}
+
+.heading-text {
+    color: var(--color-heading);
+}
+
+/* BACKGROUNDS */
+.bg-local-primary {
+    background: var(--color-primary);
+    color: var(--color-primary-foreground);
+}
+
+.bg-surface {
+    background: var(--color-surface);
+}
+
+.bg-surface-no {
+    background: var(--color-surface);
+}
+
+.bg-surface:hover {
+    background: var(--color-surface-hover);
+}
+
+.bg-background {
+    background: var(--color-background);
+}
+
+.bg-primary-gradient {
+    background-image: linear-gradient(
+        135deg,
+        var(--color-primary),
+        var(--color-primary-darker)
+    );
+}
+
+.bg-muted {
+    background-color: var(--color-muted);
+}
+
+/* TYPOGRAPHY */
+.text-base {
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-normal);
+}
+
+.text-heading {
+    font-size: var(--font-size-heading);
+    font-weight: var(--font-weight-bold);
+}
+
+.font-normal {
+    font-weight: var(--font-weight-normal);
+}
+
+.font-bold {
+    font-weight: var(--font-weight-bold);
+}
+
+/* SPACING (margin + padding) */
+.m-xs {
+    margin: var(--space-xs);
+}
+.m-sm {
+    margin: var(--space-sm);
+}
+.m-md {
+    margin: var(--space-md);
+}
+.m-lg {
+    margin: var(--space-lg);
+}
+.m-xl {
+    margin: var(--space-xl);
+}
+
+.p-xs {
+    padding: var(--space-xs);
+}
+.p-sm {
+    padding: var(--space-sm);
+}
+.p-md {
+    padding: var(--space-md);
+}
+.p-lg {
+    padding: var(--space-lg);
+}
+.p-xl {
+    padding: var(--space-xl);
+}
+
+/* RADIUS + BORDER */
+.rounded-sm {
+    border-radius: var(--radius-sm);
+}
+
+.rounded-md {
+    border-radius: var(--radius-md);
+}
+
+.border {
+    border: var(--border-width) solid var(--color-border);
+}
+
+.border-primary {
+    border: var(--border-width) solid var(--color-primary);
+}
+
+/* FLEX HELPERS */
+.flex {
+    display: flex;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* WIDTH */
+.w-contain {
+    width: fit-content;
+}
+
+/* BUTTON STYLES */
+
+.btn-primary-local {
+    background-image: linear-gradient(
+        90deg,
+        var(--color-primary),
+        var(--color-primary-darker));
+    color: white;
+    transition: var(--transition-fast);
+}
+
+.btn-check:checked+.btn, .btn.active, .btn.show, .btn:first-child:active, :not(.btn-check)+.btn:active {
+    color: white;
+}
+
+.btn-primary-local:hover {
+    transform: scale(1.1);
+    color: white;
+    background-image: linear-gradient(
+        90deg,
+        var(--color-primary-darker),
+        #E70009);
+}
+
+.btn-outline {
+    background: transparent;
+    border: var(--border-width) solid var(--color-primary);
+    color: var(--color-primary);
+}
+
+.btn-outline:hover {
+    background: var(--color-primary);
+    color: var(--color-primary-foreground);
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    color: var(--color-secondary);
+}
+
+@media (width < 576px) {
+    :root {
+        --font-size-heading: 1.2rem;
+    }
+    body {
+            font-size: 12px;
+    }
+}
+
+.rem-3-rec {
+    width: 3rem;
+    height: 3rem;
+    aspect-ratio: 1/1;
+}
+
+.rem-2-rec {
+    width: 1.5rem;
+    height: 1.5rem;
+    aspect-ratio: 1/1;
+}
+
+.rem-25-rec {
+    width: 2.5rem;
+    height: 2.5rem;
+    aspect-ratio: 1/1;
+}
+
+/* 1-00 Nav bar */
+
+.navbar {
+    --bs-navbar-toggler-focus-width: 0rem;
+}
+
+/* 2-00 main section */
+
+.pic-side {
+    min-height: 25rem;
+    /* background-color: red; */
+    /* background-image: url(../images/photo-1546793665-c74683f339c1.jfif); */
+    background-position: center center;
+    background-size: cover;
+}
+
+.pic-side_pic {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* .receipe-side {
+    background-color: blue;
+} */
+
+.receipe-side_icons > * {
+    cursor: pointer;
+    transition: 0.1 all linear;
+}
+
+/* 2-10 main sec's navand tabs */
+
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+    color: var(--color-primary);
+    background-color: transparent;
+    border-radius: 0;
+    border-bottom: 2px solid var(--color-primary);
+}
+
+.nav-pills .nav-link:not(.active):hover {
+    color: var(--color-secondary-darker-hover);
+}
+
+.nav-pills .nav-link:not(.active) {
+    color: var(--color-secondary-darker);
+    white-space: nowrap;
+}
+
+.nav-pills .nav-link {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+    padding-inline: 0;
+}
+
+.main #pills-tabContent > * {
+    height: 22rem;
+    overflow: auto;
+}
+
+.main #pills-tabContent > *::-webkit-scrollbar {
+    width: .35rem;
+}
+
+.main #pills-tabContent > *::-webkit-scrollbar-track {
+    /* background-color: transparent; */
+    margin-block: 1rem;
+}
+
+/* .main #pills-tabContent::-webkit-scrollbar-track-piece {
+    background-color: transparent;
+} */
+
+.main #pills-tabContent > *::-webkit-scrollbar-thumb {
+    background-color: #ffdbd2;
+    border-radius: 100vw;
+    transition: var(--transition-fast);
+}
+
+.main #pills-tabContent > *::-webkit-scrollbar-thumb:hover {
+    background-color: rgb(180, 102, 83);
+}
+
+
+#pills-ingredients {
+    height: 50rem;
+    background-color: #fff9eb;
+    padding: 1.5rem;
+    border-radius: 1rem;
+}
+
+.bg-lavender {
+    background-color: #dbeafe;
+}
+
+.bg-lemon {
+    background-color: #fef9c2;
+}
+
+.a-chef-tip {
+    border-left: 4px solid #ffb900;
+}
+
+.a-warning {
+        border-left: 4px solid #fb2c36;
+}
